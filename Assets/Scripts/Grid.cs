@@ -17,7 +17,7 @@ public class Grid : MonoBehaviour
 
     Cell[,] grid;
 
-    void Start()
+    private void Start()
     {
         float[,] noiseMap = new float[size, size];
         (float xOffset, float yOffset) = (Random.Range(-10000f, 10000f), Random.Range(-10000f, 10000f));
