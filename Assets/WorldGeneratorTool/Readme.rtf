@@ -1,0 +1,112 @@
+World Procedural Generator Tool Documentation
+Table of Contents
+
+    Introduction
+    Installation
+    Setup Guide
+    Script Reference
+    Troubleshooting
+    Conclusion
+
+1. Introduction
+
+Welcome to the World Procedural Generator Tool! This tool is designed to help you create dynamic and immersive grid-based worlds with ease. Whether you're developing a game or a simulation, our tool provides the flexibility and power you need to generate complex environments procedurally.
+2. Installation
+Requirements
+
+    Unity 2021.3 or higher
+    .NET Framework 4.7.1 or higher
+
+Steps
+
+    Download the World Procedural Generator Tool package from the Unity Asset Store.
+    Open your Unity project.
+    Go to Assets > Import Package > Custom Package.
+    Select the downloaded package and click Open.
+    In the Import Unity Package window, ensure all items are checked and click Import.
+
+3. Setup Guide
+Step-by-Step Tutorial
+
+    Creating a New Scene
+        Open Unity and create a new scene by going to File > New Scene.
+        Save the scene as ProceduralWorldScene.
+
+    Adding the Generator Tool
+        In the Project window, navigate to Assets > WorldProceduralGenerator.
+        Drag the Grid prefab into the Hierarchy window.
+
+    Configuring the Generator
+        Select the Grid object in the Hierarchy.
+        In the Inspector window, configure the parameters to suit your needs (e.g., size, water level, scale, tree density).
+
+    Generating the Grid
+        Press the Play button to start the scene and generate your procedural grid.
+        Adjust settings as needed and regenerate until satisfied with the result.
+
+    Adding Player and Camera
+        Add a player prefab to the scene by dragging it from Assets > Player.
+        Position the main camera to follow the player.
+
+    Saving the Scene
+        Save your scene to ensure all configurations are stored.
+
+4. Script Reference
+Grid.cs
+
+Namespace: WorldGeneratorTool.Core
+
+Description: This script handles the procedural generation of a grid-based world.
+Properties
+
+    [SerializeField] private GameObject[] treePrefabs: Array of tree prefabs used for tree generation.
+    [SerializeField] private Material terrainMaterial: Material used for the terrain.
+    [SerializeField] private Material edgeMaterial: Material used for the edges.
+    [SerializeField] private float waterLevel: Threshold for water level.
+    [SerializeField] private float scale: Scale of the noise used for terrain generation.
+    [SerializeField] private float treeNoiseScale: Scale of the noise used for tree distribution.
+    [SerializeField] private float treeDensity: Density of trees in the terrain.
+    [SerializeField] private float riverNoiseScale: Scale of the noise used for river generation.
+    [SerializeField] private int rivers: Number of rivers to generate.
+    [SerializeField] private int size: Size of the grid.
+
+Methods
+
+    void Start(): Initializes the grid and generates the procedural world.
+    void DrawTerrainMesh(Cell[,] grid): Draws the terrain mesh based on the grid data.
+    void DrawEdgeMesh(Cell[,] grid): Draws the edge mesh around the water areas.
+    void DrawTexture(Cell[,] grid): Draws the texture for the terrain based on the grid data.
+    void GenerateTrees(Cell[,] grid): Generates trees on the terrain based on the grid data.
+
+Usage Example:
+
+csharp
+
+Grid gridGenerator = new Grid();
+gridGenerator.size = 100;
+gridGenerator.waterLevel = 0.4f;
+gridGenerator.scale = 0.1f;
+gridGenerator.treeDensity = 0.5f;
+gridGenerator.Start();
+
+5. Troubleshooting
+Common Issues
+
+    Grid Not Generating
+        Ensure all required fields in the Grid script are filled.
+        Check the console for any error messages and resolve them.
+
+    Performance Issues
+        Reduce the size value to improve performance.
+        Optimize noise scales for your target platform.
+
+    Player Not Moving
+        Ensure the player prefab has a controller script attached.
+        Verify the player is correctly linked to the main camera.
+
+6. Conclusion
+
+Thank you for using the World Procedural Generator Tool! We hope this tool helps you create amazing procedural worlds effortlessly. For further assistance, please refer to the detailed script reference or contact our support team.
+Appendix
+
+For additional resources and video tutorials, visit our official website.
