@@ -1,13 +1,13 @@
 ﻿#region Using statements
 
-using Bitgem.Core;
+using WorldGeneratorTool.Core;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 #endregion
 
-namespace Bitgem.VFX.StylisedWater
+namespace WorldGeneratorTool.VFX.StylisedWater
 {
     [ExecuteInEditMode]
     [RequireComponent(typeof(MeshFilter))]

@@ -5,7 +5,7 @@ using UnityEngine;
 
 #endregion
 
-namespace Bitgem.Core
+namespace WorldGeneratorTool.Core
 {
     public class FlagEnumAttribute : PropertyAttribute
     {

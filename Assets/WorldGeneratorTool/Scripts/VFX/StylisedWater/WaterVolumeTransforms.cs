@@ -6,9 +6,9 @@ using UnityEngine;
 
 #endregion
 
-namespace Bitgem.VFX.StylisedWater
+namespace WorldGeneratorTool.VFX.StylisedWater
 {
-    [AddComponentMenu("Bitgem/Water  Volume (Transforms)")]
+    [AddComponentMenu("World Generator Tool/Water  Volume (Transforms)")]
     public class WaterVolumeTransforms : WaterVolumeBase
     {
         #region MonoBehaviour events

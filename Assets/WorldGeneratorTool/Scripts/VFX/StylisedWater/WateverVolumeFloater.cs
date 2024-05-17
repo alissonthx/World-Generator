@@ -6,7 +6,7 @@ using UnityEngine;
 
 #endregion
 
-namespace Bitgem.VFX.StylisedWater
+namespace WorldGeneratorTool.VFX.StylisedWater
 {
     public class WateverVolumeFloater : MonoBehaviour
     {
